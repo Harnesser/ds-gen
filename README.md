@@ -19,7 +19,7 @@ latched. etc. Is this mad?
 
 Output
 --------------------------------------------
-An [example of the output][doc/cmos_24p2-ds/cmos_24p2-ds.html] can be found
+An [example of the output](doc/cmos_24p2-ds/cmos_24p2-ds.html) can be found
 in the `doc/cmos_24p2-ds/` directory.
 
 
