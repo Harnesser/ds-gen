@@ -1,0 +1,51 @@
+label = "Open-Loop Frequency Response"
+deck = "open_loop_freq_tb.sp"
+cload = "100fF"
+rload = "10meg"
+cfb = "2.5pF"
+rfb = "6.5k"
+
+[measures] 
+  [measures.dc_gain]
+    label = "DC Gain"
+    unit = "dBV"
+
+  [measures.f_0db ]
+    label = "Unity Gain Frequency"
+    unit = "Hz"
+
+  [measures.f_3db]
+    label = "3dB Gain Frequency"
+    unit = "Hz"
+
+  [measures.phase_margin]
+    label = "Phase Margin"
+    unit = "deg"
+
+[waveforms]
+  [waveforms.0]
+    [waveforms.0.indep]
+      label = "Frequency"
+      unit = "Hz"
+    [waveforms.0.dep]
+      label = "v(op)"
+      unit = "VdB"
+  [waveforms.1]
+    [waveforms.1.indep]
+      label = "Frequency"
+      unit = "Hz"
+      scale = "log"
+    [waveforms.1.dep]
+      label = "ph(op)"
+      unit = "Degrees"
+
+
+[plots]
+  [plots.0]
+    label = "Frequency Response"
+    plot_style = "stack"
+    waveforms = ['v(op)', 'ph(op)']
+    waveform_styles = ['bold', 'bold']
+    xscale = "log"
+    yscale = "linear"
+

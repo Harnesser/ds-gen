@@ -1,0 +1,57 @@
+label = "Input Common Mode Range"
+deck = "input_common_mode_range_tb.sp"
+cload = "5pF"
+rload = "10meg"
+
+[measures] 
+  [measures.icmr_min]
+    label = "Input Common Mode Minimum"
+    unit = "V"
+
+  [measures.icmr_max]
+    label = "Input Common Mode Maximum"
+    unit = "V"
+
+[waveforms]
+  [waveforms.0]
+    [waveforms.0.indep]
+      label = "v(ip)"
+      unit = "V"
+    [waveforms.0.dep]
+      label = "v(ip)"
+      unit = "V"
+  [waveforms.1]
+    [waveforms.1.indep]
+      label = "v(ip)"
+      unit = "V"
+    [waveforms.1.dep]
+      label = "v(op)"
+      unit = "V"
+  [waveforms.2]
+    [waveforms.2.indep]
+      label = "v(ip)"
+      unit = "V"
+    [waveforms.2.dep]
+      label = "i(VDD)"
+      unit = "A"
+  [waveforms.3]
+    [waveforms.3.indep]
+      label = "v(ip)"
+      unit = "V"
+    [waveforms.3.dep]
+      label = "bathtub"
+      unit = ""
+ 
+[plots]
+  [plots.0]
+    label = "Input Common Mode Range"
+    plot_style = "stack"
+    waveforms = [ 'i(VDD)', 'v(ip);v(op)']
+    waveform_styles = [ 'bold', 'faint;bold' ]
+
+
+[histograms]
+  [histograms.0]
+    label = "Input Common Mode Range"
+    measures = ['icmr_min', 'icmr_max']
+    

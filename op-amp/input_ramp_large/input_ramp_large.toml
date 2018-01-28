@@ -1,0 +1,36 @@
+label = "Input Ramp Large"
+deck = "input_ramp_large_tb.sp"
+cload = "5pF"
+rload = "10meg"
+
+[measures] 
+  [measures.voutmin]
+    label = "Minimum Output Voltage"
+    unit = "V"
+
+  [measures.voutmax]
+    label = "Maximum Output Voltage"
+    unit = "V"
+
+[waveforms]
+  [waveforms.0]
+    [waveforms.0.indep]
+      label = "v(ip)-Vcm"
+      unit = "V"
+    [waveforms.0.dep]
+      label = "v(op)-Vcm"
+      unit = "V"
+
+[plots]
+  [plots.0]
+    label = "Output Voltage Range"
+    plot_style = "overlay"
+    waveforms = ['v(op)-Vcm']
+    waveform_styles = ['bold']
+
+
+[histograms]
+  [histograms.0]
+    label = "Output Voltage Minimum and Maximum"
+    measures = ['voutmin', 'voutmax']
+    

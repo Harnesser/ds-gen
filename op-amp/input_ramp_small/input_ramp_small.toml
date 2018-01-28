@@ -1,0 +1,37 @@
+label = "Input Ramp Small"
+deck = "input_ramp_small_tb.sp"
+cload = "5pF"
+rload = "10meg"
+
+[measures] 
+  [measures.a_oldc]
+    label = "DC Open-loop Gain"
+    unit = ""
+
+  [measures.v_off]
+    label = "Offset"
+    unit = "V"
+
+[waveforms]
+  [waveforms.0]
+    [waveforms.0.indep]
+      label = "v(ip)-Vcm"
+      unit = "V"
+    [waveforms.0.dep]
+      label = "v(op)-Vcm"
+      unit = "V"
+ 
+[plots]
+  [plots.0]
+    label = "Offset"
+    plot_style = "overlay"
+    waveforms = ['v(op)-Vcm']
+    waveform_styles = ['bold']
+
+
+[histograms]
+  [histograms.0]
+    label = "Offset"
+    measures = ['v_off']
+
+

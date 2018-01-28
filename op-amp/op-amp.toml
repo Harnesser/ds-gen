@@ -1,0 +1,8 @@
+benches = [
+  'input_ramp_small',
+  'input_ramp_large',
+  'open_loop_freq',
+  'input_common_mode_range',
+]
+
+
