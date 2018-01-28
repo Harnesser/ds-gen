@@ -17,6 +17,11 @@ There are a few aspects to this then:
 I dunno. there's so many different things. comparators with hyst, without
 latched. etc. Is this mad?
 
+Output
+--------------------------------------------
+An [example of the output][doc/cmos_24p2-ds/cmos_24p2-ds.html] can be found
+in the `doc/cmos_24p2-ds/` directory.
+
 
 Design
 --------------------------------------------
